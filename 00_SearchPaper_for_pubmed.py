@@ -6,7 +6,11 @@ from openpyxl.styles import Font, Alignment, PatternFill, Border, Color, Side
 import os
 import time
 # import win32com.client
+<<<<<<< HEAD
 # 수정사항반영중
+=======
+
+>>>>>>> parent of a0c75a2 (Update 00_SearchPaper_for_pubmed.py)
 # excel = win32com.client.Dispatch("Excel.Application")
 # search_code = input("검색어를 입력하세요 >>>>>")
 
