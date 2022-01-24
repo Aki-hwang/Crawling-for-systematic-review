@@ -14,7 +14,7 @@ import time
 # search_code = input("검색어를 입력하세요 >>>>>")
 
 # search_code = "(urine) AND (albumin) AND ((biosensor) OR (sensor))"
-search_code = "(((body fluids) OR (urine)) AND ((hydrogen ion) OR (nitrite) OR (albumin) OR (bilirubin) OR (hemoglobin) OR (glucose) OR (ketone) OR (leukocyte esterase) OR (specific gravity)) AND ((biosensor) OR (sensor))) NOT ((review) OR (DNA) OR (rna) or (cancer) OR (color) OR (photo) OR (optical) OR (dopamine) OR (colorimetric) OR (plasmon) OR (fluorescent) OR (electrochemiluminescence) OR (pseudomonas) OR (bladder))"
+search_code = "(((body fluids) OR (urine)) AND ((hydrogen ion) OR (nitrite) OR (albumin) OR (bilirubin) OR (hemoglobin) OR (glucose) OR (ketone) OR (leukocyte esterase) OR (specific gravity)) AND ((biosensor) OR (sensor)))"
 pubmed_code = search_code.replace(" ","+").replace("(","%28").replace(")","%29")
 # search_year = input("언제부터 검색? >>")
 start_year = 2016
