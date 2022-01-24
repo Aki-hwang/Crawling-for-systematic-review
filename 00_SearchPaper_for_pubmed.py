@@ -6,11 +6,10 @@ from openpyxl.styles import Font, Alignment, PatternFill, Border, Color, Side
 import os
 import time
 # import win32com.client
-<<<<<<< HEAD
-# 수정사항반영중
-=======
 
->>>>>>> parent of a0c75a2 (Update 00_SearchPaper_for_pubmed.py)
+#=======
+
+
 # excel = win32com.client.Dispatch("Excel.Application")
 # search_code = input("검색어를 입력하세요 >>>>>")
 
@@ -63,7 +62,7 @@ else:
     sheet_compare.column_dimensions["A"].width = 30
     sheet_compare.column_dimensions["B"].width = 200
     myPaperData = 1
-    while myPaperData < 24:
+    while myPaperData < 25:
         sheet_pub.cell(row=myPaperData, column=1).value = sheet_paper.cell(row=myPaperData, column=1).value
         sheet_pub.cell(row=myPaperData, column=2).value = sheet_paper.cell(row=myPaperData, column=2).value
         myPaperData += 1
@@ -97,7 +96,7 @@ else:
     compare_result = []
     Paper_title_pubmed = []
      #내 논문빼고 20부터
-    row_num = 26
+    row_num = 27
     row_comp = 1
     row_excel = 1
     # while True:
@@ -147,8 +146,8 @@ else:
     # print("내 논문은 {}입니다".format(myPaperTitle))
     print("Pubmed에 포함된 내 논문은 {}개 입니다".format(row_comp-1))
     print("Pubmed에 포함된 내 논문은 {}입니다".format(compare_result))
-    sheet_pub.cell(row=24, column=2).value = "Pubmed에서 찾은 {}년부터 {}년까지 찾은 전체 논문은 {}개, 그 중 내 논문은 {}개입니다".format(start_year,end_year,row_excel-1,row_comp-1)
-    sheet_pub.cell(row=25, column=2).value = "Pubmed에 포함된 내 논문은 {}입니다".format(compare_result)
+    sheet_pub.cell(row=25, column=2).value = "Pubmed에서 찾은 {}년부터 {}년까지 찾은 전체 논문은 {}개, 그 중 내 논문은 {}개입니다".format(start_year,end_year,row_excel-1,row_comp-1)
+    sheet_pub.cell(row=26, column=2).value = "Pubmed에 포함된 내 논문은 {}입니다".format(compare_result)
     # print(compare_result)
     #반드시 세이브 해야해
     book.save("./00_SearchPaper_result.xlsx")
